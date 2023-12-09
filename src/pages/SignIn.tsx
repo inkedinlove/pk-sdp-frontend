@@ -123,8 +123,9 @@ export const SignIn = () => {
         )}
 
         <form onSubmit={handleSubmit}>
+          <img src="/logo512.png" alt="pakana logo" />
           <Heading size="sm" as="h1">
-            Sign in to Stellar Disbursement Platform
+            Sign in to Pakana Disbursement Platform
           </Heading>
           {!USE_SSO && (
             <>
@@ -133,7 +134,7 @@ export const SignIn = () => {
                 id="si-email"
                 name="si-email"
                 label="Email address"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: { target: { value: any; }; }) => setEmail(e.target.value)}
                 type="email"
               />
               <Input
@@ -142,7 +143,7 @@ export const SignIn = () => {
                 name="si-password"
                 label="Password"
                 isPassword
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e: { target: { value: any; }; }) => setPassword(e.target.value)}
               />
               <Recaptcha
                 ref={recaptchaRef}
